@@ -1,0 +1,38 @@
+{
+
+  "manifest_version": 2,
+  "name": "Springerify",
+  "version": "1.0",
+
+  "description": "Apunta a obtener un vistazo rapido de los papers con los que se relaciona el paper actual",
+  "icons": {
+    "48": "icons/logo-caballo.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "*://link.springer.com/*",
+    "*://jsonplaceholder.typicode.com/*",
+    "*://scholar.google.com/*",
+    "webRequest"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/logo-caballo.png",
+    "default_title": "Springerificar",
+    "default_popup": "popup/popup.html"
+  },
+
+  "content_scripts": [{
+    "matches": ["*://link.springer.com/article/*"],
+    "js": [
+      "node_modules/jquery/dist/jquery.min.js",
+      "content_scripts/springerify.js"
+    ]
+  }],
+
+  "web_accessible_resources": [
+    "images/pdf-file.png"
+  ]  
+
+}

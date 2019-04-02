@@ -1,0 +1,25 @@
+body {
+  height: 50%;
+  text-align: center;
+  background: #ee7d11bf;
+}
+
+.hidden {
+  display: none;
+}
+
+#popup-title{
+	color: #4a76ae;
+}
+
+#popup-content .button {
+  border-radius: 5%;
+  margin: 3% auto;
+  padding: 4px;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center;
+  background-color: #415e82;
+  color: #efefef;
+}
+
